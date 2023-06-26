@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-----------Header----------->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
           <a href="./index.html" class="header-logo link"
@@ -58,18 +58,93 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="open-menu-btn" data-menu-open>
+          <svg class="icon-charm" width="32" height="22">
+            <use href="./images/icons.svg#icon-charm-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <div class="mob-menu is is-hidden" data-menu>
+        <div>
+          <button type="button" class="mob-close-btn" data-menu-close>
+            <svg class="" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu-list list">
+            <li class="mob-menu-item">
+              <a href="./index.html" class="mob-menu-link link current"
+                >Studio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a href="./portfolio.html" class="mob-menu-link link"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a href="" class="mob-menu-link link">Contacts</a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="mob-list list">
+          <li class="mob-item">
+            <a href="mailto:info@devstudio.com" class="mail-link link"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="mob-item">
+            <a href="tel:+110001111111" class="phone-link link"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mob-social-list list">
+          <li class="mob-social-icon">
+            <a href="https://www.instagram.com/" class="mob-soc-network">
+              <svg class="social-icon-item" width="16" height="16">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-social-icon">
+            <a href="https://www.twitter.com/" class="mob-soc-network">
+              <svg class="social-icon-item" width="16" height="16">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-social-icon">
+            <a href="https://www.facebook.com/" class="mob-soc-network">
+              <svg class="social-icon-item" width="16" height="16">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-social-icon">
+            <a href="https://www.linkedin.com/" class="mob-soc-network">
+              <svg class="social-icon-item" width="16" height="16">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
     <main>
       <!-----------------Section: Hero------------->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container hero-container">
-          <h1 class="hero-title">Effective Solutions for Your Business</h1>
+          <h1 class="hero-title">Effective Solutions For Your Business</h1>
           <button type="button" class="hero-btn" data-modal-open>
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
 
       <!------------Section: About Us-------------->
       <section class="about">
@@ -135,6 +210,7 @@
           <ul class="doing-list list">
             <li class="doing-item">
               <img
+                srcset="./images/img-1.jpg 1x, ./images/img-1-2x.jpg 2x"
                 src="./images/img-1.jpg"
                 alt="example of PC app"
                 width="360"
@@ -143,6 +219,7 @@
             </li>
             <li class="doing-item">
               <img
+                srcset="./images/img-2.jpg 1x, ./images/img-2-2x.jpg 2x"
                 src="./images/img-2.jpg"
                 alt="example of Mobile app"
                 width="360"
@@ -151,6 +228,7 @@
             </li>
             <li class="doing-item">
               <img
+                srcset="./images/img-3.jpg 1x, ./images/img-3-2x.jpg 2x"
                 src="./images/img-3.jpg"
                 alt="example of sinchronized app"
                 width="360"
@@ -168,6 +246,7 @@
           <ul class="team-list list">
             <li class="team-item">
               <img
+                srcset="./images/team-1.jpg 1x, ./images/team-1-2x.jpg 2x"
                 src="./images/team-1.jpg"
                 alt="photo of Mark Guerrero"
                 width="264"
@@ -211,6 +290,7 @@
 
             <li class="team-item">
               <img
+                srcset="./images/team-2.jpg 1x, ./images/team-2-2x.jpg 2x"
                 src="./images/team-2.jpg"
                 alt="photo of Tom Ford"
                 width="264"
@@ -254,6 +334,7 @@
 
             <li class="team-item">
               <img
+                srcset="./images/team-3.jpg 1x, ./images/team-3-2x.jpg 2x"
                 src="./images/team-3.jpg"
                 alt="photo of Camila Garcia"
                 width="264"
@@ -296,6 +377,7 @@
 
             <li class="team-item">
               <img
+                srcset="./images/team-4.jpg 1x, ./images/team-4-2x.jpg 2x"
                 src="./images/team-4.jpg"
                 alt="photo of Daniel Wilson"
                 width="264"
@@ -461,7 +543,7 @@
     </footer> -->
 
     <!-----------------Modal window------------------->
-    <!-- <div class="modal-container is-hidden" data-modal>
+    <div class="modal-container is-hidden" data-modal>
       <div class="modal-window">
         <button type="button" data-modal-close class="modal-close-btn">
           <svg class="icon-close" width="8" height="8">
@@ -548,7 +630,8 @@
           <button type="submit" class="modal-button">Send</button>
         </form>
       </div>
-    </div> -->
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
