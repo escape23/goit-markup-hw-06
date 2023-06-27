@@ -185,8 +185,8 @@ img {
     position: fixed;
     top: 0;
     z-index: 2;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
     padding: 24px 24px 40px 40px;
     display: flex;
@@ -197,7 +197,7 @@ img {
 
 .mob-menu-list{
     padding-top: 56px;
-    margin-bottom: 284px;
+    margin-bottom: auto;
 }
 
 .mob-menu-item:not(:last-child){
@@ -262,9 +262,9 @@ img {
 
 .mob-social-list {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* justify-content: center; */
-    /* gap: 56px; */
+    gap: 56px;
     padding-right: 36px;
 }
 
@@ -413,15 +413,21 @@ img {
     width: 100%;
 }
 
-.about-item:not(:last-child){
+/* .about-item:not(:last-child){
     margin-bottom: 72px;
-}
+} */
 
 .about-subtitle {
-    font-weight: 500;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+
+    /* font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.02em; */
     color: var(--title-color);
     margin-bottom: 8px;
     text-align: center;
@@ -429,6 +435,8 @@ img {
 
 
 .about-item-text {
+    font-weight: 500;
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -476,7 +484,7 @@ img {
 
 .team-container {
     background-color: var(--second-bc-color);
-    padding: 32px 16px;
+    /* padding: 32px 16px; */
 }
 
 
@@ -726,7 +734,7 @@ img {
     letter-spacing: 0.02em;
     color: var(--second-text-color);
 
-    /* margin-bottom: 16px; */
+    margin-bottom: 16px;
 }
 
 
@@ -775,7 +783,7 @@ img {
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     text-align: center;
     gap: 16px;
 }
@@ -1177,12 +1185,15 @@ img {
 }
 
 /* ------------Media-------------- */
-/* @media screen and (min-width: 428px) {
-    .container{
-        max-width: 426px;
+@media screen and (max-width: 427px) {
+    .phone-link{
+        font-size: 24px;
+    }
+    .mob-social-list{
+        gap: 20px;
     }
     
-} */
+}
 
 @media screen and (min-width: 768px) {
     .container {
@@ -1191,8 +1202,10 @@ img {
     /* Header */
     .header{
         /* Trying to find solution (as well as ::after) */
-        padding-top: 16px;
-        padding-bottom: 16px;
+        /* padding-top: 16px;
+        padding-bottom: 16px; */
+        padding-top: 11px;
+        padding-bottom: 11px;
     }
     .open-menu-btn {
         display: none;
@@ -1224,12 +1237,18 @@ img {
         content: "";
         position: absolute;
         left: 0;
-        bottom: -13px;
+        bottom: -2px;
         height: 4px;
         background-color: var(--focus-color);
         border-radius: 2px;
         display: block;
         width: 100%;
+    }
+
+    .address-link{
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.48px;
     }
     /*--------Section: Hero---------- */
     .hero{
@@ -1263,6 +1282,9 @@ img {
         column-gap: 24px;
         row-gap: 72px;
     }
+    .about-subtitle{
+        text-align: left;
+    }
     /* -----------Section: Our Team---------- */
     .team-list{
         column-gap: 24px;
@@ -1278,7 +1300,11 @@ img {
         row-gap: 72px;
     }
     .customers-item{
-        width: calc((100% - 48px) / 3);
+        /* width: calc((100% - 48px) / 3); */
+        width: 168px;
+    }
+    .customers-list{
+        justify-content: center;
     }
     /*------------------Footer------------------*/
     .footer-container{
@@ -1286,6 +1312,7 @@ img {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 72px 24px;
+        max-width: 550px;
     }
     .footer-logo{
         margin-right: auto;
@@ -1354,6 +1381,12 @@ img {
             gap: 40px;
             flex-direction: row;
         }
+
+        .address-link{
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.32px;
+        }
         .open-menu-btn {
             display: none;
         }
@@ -1366,7 +1399,7 @@ img {
     padding: 188px 0;
     background-image: linear-gradient(to bottom,
                 rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)), url(../images/bg-image-desk.jpg);
+                rgba(46, 47, 66, 0.7)), url(../images/bg-image-desk-2x.jpg);
     max-width: 1440px;
 }
 @media (min-device-pixel-ratio: 2),
@@ -1405,6 +1438,16 @@ img {
     display: block;
 }
 
+.about-subtitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.about-item-text{
+    font-weight: 400;
+}
 /* --------Section: What Are We Doing------- */
 .doing {
     display: block;
